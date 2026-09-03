@@ -1,0 +1,42 @@
+{
+  "name": "genpark-agent-breakpoint-checkpoint-approval-patcher-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - LangGraph style human-in-the-loop breakpoint pause, state variable mutation patcher, and graph execution resumer.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "multi-agent-swarms",
+  "tags": [
+    "langgraph",
+    "breakpoint",
+    "checkpoint",
+    "human-in-the-loop",
+    "state-patcher"
+  ],
+  "inputs": {
+    "checkpoint_id": {
+      "type": "string"
+    },
+    "proposed_mutation_action": {
+      "type": "string"
+    },
+    "approval_status": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "breakpoint_event_id": {
+      "type": "string"
+    },
+    "checkpoint_id": {
+      "type": "string"
+    },
+    "state_mutation_applied": {
+      "type": "boolean"
+    },
+    "audit_trail_signature_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
